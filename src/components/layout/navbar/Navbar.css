@@ -22,3 +22,7 @@ li {
 .buttonNav {
   color: black !important;
 }
+
+.logoimg {
+  border-radius: 0.5rem;
+}
