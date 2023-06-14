@@ -11,10 +11,10 @@ img {
 .categorias {
   display: flex;
   list-style: none;
+  margin: 20px;
 }
 
-.categorias,
-li {
+.btnCategoy {
   margin: 0 30px;
   margin-top: 30px;
 }

@@ -8,7 +8,7 @@ export const products = [
 
     stock: 15,
 
-    category: "Inteligentes",
+    category: "inteligentes",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835128/sleep-good/kanal_oqzgox.avif",
   },
@@ -22,7 +22,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Inteligentes",
+    category: "inteligentes",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835128/sleep-good/sense-air-americana_ejmh0q.avif",
   },
@@ -36,7 +36,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Inteligentes",
+    category: "inteligentes",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835128/sleep-good/sense-air-tradicional_xso4tc.avif",
   },
@@ -50,7 +50,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Inteligentes",
+    category: "inteligentes",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835128/sleep-good/kalma-firm-slim_b1nqcm.avif",
   },
@@ -64,7 +64,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Inteligentes",
+    category: "inteligentes",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835127/sleep-good/kalma-firm_s2kxfy.avif",
   },
@@ -78,7 +78,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Familiares",
+    category: "familiares",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685836881/sleep-good/super-combo-kalm-firm-x5unid_xjl5df.avif",
   },
@@ -92,7 +92,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Familiares",
+    category: "familiares",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685836880/sleep-good/super-combo-familiar-nuvy-firm-x5unid_f75gne.avif",
   },
@@ -106,7 +106,7 @@ export const products = [
 
     stock: 15,
 
-    category: "Hoteleras",
+    category: "hoteleras",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685839491/sleep-good/moon_mus5lv.jpg",
   },
@@ -118,9 +118,9 @@ export const products = [
 
     price: 18550,
 
-    stock: 5,
+    stock: 8,
 
-    category: "Hoteleras",
+    category: "hoteleras",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685839491/sleep-good/paris_nsaeci.jpg",
   },
@@ -134,7 +134,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Hoteleras",
+    category: "hoteleras",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685839490/sleep-good/dual_qp6l3v.avif",
   },
@@ -148,7 +148,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Hoteleras",
+    category: "hoteleras",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685839490/sleep-good/aireada-mega-xl_crtme0.avif",
   },
@@ -162,7 +162,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Hoteleras",
+    category: "hoteleras",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835127/sleep-good/kalma-firm_s2kxfy.avif",
   },
@@ -176,7 +176,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Hoteleras",
+    category: "hoteleras",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685839490/sleep-good/aireada-mega-xxl_hoftbj.avif",
   },
@@ -190,7 +190,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Cervicales",
+    category: "cervicales",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685840088/sleep-good/sense-air-postural_iedzar.avif",
   },
@@ -204,7 +204,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Cervicales",
+    category: "cervicales",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685840088/sleep-good/healthy-firm-slim-cervical_tu5qkq.avif",
   },
@@ -218,7 +218,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Cervicales",
+    category: "cervicales",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685840088/sleep-good/antirronquido_iviobn.jpg",
   },
@@ -232,7 +232,7 @@ export const products = [
 
     stock: 5,
 
-    category: "Cervicales",
+    category: "cervicales",
 
     img: "https://res.cloudinary.com/ddmvo0ert/image/upload/v1685840088/sleep-good/healthy-firm-cervical_zdgz8y.avif",
   },
