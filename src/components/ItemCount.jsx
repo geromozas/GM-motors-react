@@ -15,12 +15,7 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
         <Button variant="contained" size="small" onClick={increment}>
           +
         </Button>
-        <Button
-          className="{useStyles}"
-          variant="contained"
-          size="small"
-          onClick={() => onAdd(count)}
-        >
+        <Button variant="contained" size="small" onClick={() => onAdd(count)}>
           Agregar al carrito
         </Button>
       </div>

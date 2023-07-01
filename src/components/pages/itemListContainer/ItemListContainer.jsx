@@ -19,7 +19,7 @@ export const ItemListContainer = () => {
     const tarea = new Promise((resolve) => {
       setTimeout(() => {
         resolve(categoryName ? productosFiltrados : products);
-      }, 2000);
+      }, 1000);
     });
 
     tarea.then((respuesta) => setItems(respuesta));

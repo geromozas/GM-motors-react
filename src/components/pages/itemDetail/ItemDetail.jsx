@@ -1,5 +1,5 @@
 import { ItemCount } from "../../ItemCount";
-import "./itemDetail.css";
+import "./ItemDetail.css";
 
 export const ItemDetail = ({ productSelected, addToCart, amount }) => {
   const onAdd = (cantidad) => {
