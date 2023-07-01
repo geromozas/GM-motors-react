@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
-import { ItemListContainerPresentacional } from "./ItemListContainerPresentacional";
+import { ItemList } from "./ItemList";
 import { products } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 import "./ItemListContainer.css";
+import { Box, CircularProgress } from "@mui/material";
 
 export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
+
   const { categoryName } = useParams();
-  console.log(categoryName);
+  console.log(items.length);
 
   useEffect(() => {
     let productosFiltrados = products.filter(
@@ -15,16 +17,32 @@ export const ItemListContainer = () => {
     );
 
     const tarea = new Promise((resolve) => {
-      resolve(categoryName ? productosFiltrados : products);
+      setTimeout(() => {
+        resolve(categoryName ? productosFiltrados : products);
+      }, 2000);
     });
 
-    tarea
-      .then((respuesta) => setItems(respuesta))
-      .catch((rechazo) => {
-        console.log(rechazo);
-      });
+    tarea.then((respuesta) => setItems(respuesta));
   }, [categoryName]);
-  return <ItemListContainerPresentacional items={items} />;
+
+  return (
+    <div>
+      {items.length > 0 ? (
+        <ItemList items={items} />
+      ) : (
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "200px",
+          }}
+        >
+          <CircularProgress color="inherit" />
+        </Box>
+      )}
+    </div>
+  );
 };
 
 // export const ItemListContainer = ({ greeting }) => {

@@ -1,29 +1,23 @@
 import "./App.css";
-import { CartContainer } from "./components/pages/cart/CartContainer";
-import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
-import { ProductDetailContainer } from "./components/pages/productDetail/ProductDetailContainer";
+import { menuRoutes } from "./routes/menuRoutes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout/Layout";
+import CartContextComponent from "./context/CartContext";
 
 function App() {
   return (
     <div className="custom-background">
       <BrowserRouter>
-        <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<ItemListContainer />} />
-            <Route
-              path="/category/:categoryName"
-              element={<ItemListContainer />}
-            />
-            <Route
-              path="/productDetail/:id"
-              element={<ProductDetailContainer />}
-            />
-            <Route path="/carrito" element={<CartContainer />} />
+        <CartContextComponent>
+          <Routes>
+            <Route element={<Layout />}>
+              {menuRoutes.map(({ id, path, Element }) => (
+                <Route key={id} path={path} element={<Element />} />
+              ))}
+            </Route>
             <Route path="*" element={<h1>404 NOT FOUND</h1>} />
-          </Route>
-        </Routes>
+          </Routes>
+        </CartContextComponent>
       </BrowserRouter>
     </div>
   );

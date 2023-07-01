@@ -1,6 +1,6 @@
 import { ProductCard } from "../../common/productCard/ProductCard";
 import "./ItemListContainer.css";
-export const ItemListContainerPresentacional = ({ items }) => {
+export const ItemList = ({ items }) => {
   return (
     <div className="cards">
       {items.map((elemento) => {

@@ -1,0 +1,22 @@
+.item-flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 150px;
+}
+
+.item-right {
+  width: 450px;
+}
+
+.item-right {
+  text-transform: uppercase;
+}
+
+.item-right p {
+  text-align: justify;
+}
+
+.item-right span {
+  font-weight: 500;
+}

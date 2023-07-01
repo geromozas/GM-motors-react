@@ -4,11 +4,12 @@ h1 {
 }
 
 .cards {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  padding: 100px;
 }

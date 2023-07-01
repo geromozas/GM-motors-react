@@ -2,11 +2,11 @@ export const products = [
   {
     id: 1,
 
-    title: "Kanal",
+    name: "Kanal",
 
     price: 12900,
 
-    stock: 15,
+    stock: 0,
 
     category: "inteligentes",
 
@@ -16,7 +16,7 @@ export const products = [
   {
     id: 2,
 
-    title: "Sense Air Americana",
+    name: "Sense Air Americana",
 
     price: 13270,
 
@@ -30,7 +30,7 @@ export const products = [
   {
     id: 3,
 
-    title: "Sense Air Tradicional",
+    name: "Sense Air Tradicional",
 
     price: 12500,
 
@@ -44,7 +44,7 @@ export const products = [
   {
     id: 4,
 
-    title: "Kanal Firm Slim",
+    name: "Kanal Firm Slim",
 
     price: 10200,
 
@@ -58,7 +58,7 @@ export const products = [
   {
     id: 5,
 
-    title: "Kanal Firm",
+    name: "Kanal Firm",
 
     price: 11300,
 
@@ -72,7 +72,7 @@ export const products = [
   {
     id: 6,
 
-    title: "Super Combo Kalm Firm Slim X 5 unid",
+    name: "Combo Kalm Firm Slim X 5 unid",
 
     price: 26800,
 
@@ -86,7 +86,7 @@ export const products = [
   {
     id: 7,
 
-    title: "Super Combo Familiar nuby-firm X 5 unid",
+    name: "Combo Familiar nuby-firm X 5 unid",
 
     price: 26330,
 
@@ -100,7 +100,7 @@ export const products = [
   {
     id: 8,
 
-    title: "Moon",
+    name: "Moon",
 
     price: 14600,
 
@@ -114,7 +114,7 @@ export const products = [
   {
     id: 9,
 
-    title: "Paris",
+    name: "Paris",
 
     price: 18550,
 
@@ -128,7 +128,7 @@ export const products = [
   {
     id: 10,
 
-    title: "Dual",
+    name: "Dual",
 
     price: 15400,
 
@@ -142,7 +142,7 @@ export const products = [
   {
     id: 11,
 
-    title: "Aireada mega XL",
+    name: "Aireada mega XL",
 
     price: 19760,
 
@@ -156,7 +156,7 @@ export const products = [
   {
     id: 12,
 
-    title: "Confort Evolution",
+    name: "Confort Evolution",
 
     price: 15985,
 
@@ -170,7 +170,7 @@ export const products = [
   {
     id: 13,
 
-    title: "Aireada mega XXL",
+    name: "Aireada mega XXL",
 
     price: 19760,
 
@@ -184,7 +184,7 @@ export const products = [
   {
     id: 14,
 
-    title: "Sense Air Postural",
+    name: "Sense Air Postural",
 
     price: 13030,
 
@@ -198,7 +198,7 @@ export const products = [
   {
     id: 15,
 
-    title: "Healthy Firm Slim Cervical",
+    name: "Healthy Firm Slim Cervical",
 
     price: 10415,
 
@@ -212,7 +212,7 @@ export const products = [
   {
     id: 16,
 
-    title: "Antirronquido",
+    name: "Antirronquido",
 
     price: 14850,
 
@@ -226,7 +226,7 @@ export const products = [
   {
     id: 17,
 
-    title: "Healthy Firm Cervical",
+    name: "Healthy Firm Cervical",
 
     price: 11760,
 

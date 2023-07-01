@@ -5,13 +5,10 @@ import {
   CardActions,
   CardContent,
   CardMedia,
-  // Grid,
   Typography,
 } from "@mui/material";
-import "./ProductCard.css";
-import { Link } from "react-router-dom";
 
-export const ProductCard = ({ elemento }) => {
+export const ProductCardCart = ({ elemento }) => {
   return (
     <Card sx={{ width: 345 }}>
       <CardActionArea>
@@ -39,11 +36,9 @@ export const ProductCard = ({ elemento }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Link to={`/productDetail/${elemento.id}`}>
-          <Button size="small" color="primary" variant="contained">
-            VER DETALLE
-          </Button>
-        </Link>
+        <Button size="small" color="secondary" variant="contained">
+          Agregar el carrito
+        </Button>
       </CardActions>
     </Card>
   );

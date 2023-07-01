@@ -17,27 +17,27 @@ export const Navbar = () => {
           />
         </Link>
         <ul className="categorias">
-          <Link className="btnCategoy" to="/">
+          <Link className="btnCategory" to="/">
             <Button className="buttonNav" color="inherit" variant="contained">
               TODAS
             </Button>
           </Link>
-          <Link className="btnCategoy" to="/category/cervicales">
+          <Link className="btnCategory" to="/category/cervicales">
             <Button className="buttonNav" color="inherit" variant="contained">
               CERVICALES
             </Button>
           </Link>
-          <Link className="btnCategoy" to="/category/familiares">
+          <Link className="btnCategory" to="/category/familiares">
             <Button className="buttonNav" color="inherit" variant="contained">
               FAMILIARES
             </Button>
           </Link>
-          <Link className="btnCategoy" to="/category/hoteleras">
+          <Link className="btnCategory" to="/category/hoteleras">
             <Button className="buttonNav" color="inherit" variant="contained">
               HOTELERAS
             </Button>
           </Link>
-          <Link className="btnCategoy" to="/category/inteligentes">
+          <Link className="btnCategory" to="/category/inteligentes">
             <Button className="buttonNav" color="inherit" variant="contained">
               INTELIGENTES
             </Button>
