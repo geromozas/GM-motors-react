@@ -5,7 +5,7 @@ export const CartContext = createContext();
 
 //creo el componente proveedor del contexto, a travez de este componente voy a poner a dispocision de mi aplicación
 const CartContextComponent = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(localStorage.getItem("cart") || []);
 
   const addToCart = (newProduct) => {
     let exist = cartExist(newProduct.id);
@@ -21,8 +21,10 @@ const CartContextComponent = ({ children }) => {
         }
       });
       setCart(newArray);
+      localStorage.setItem("cart", JSON.stringify(newArray));
     } else {
       setCart([...cart, newProduct]);
+      localStorage.setItem("cart", JSON.stringify([...cart, newProduct]));
     }
   };
 
@@ -45,12 +47,28 @@ const CartContextComponent = ({ children }) => {
     return product?.quantity;
   };
 
+  const TotalItemsCart = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.quantity;
+    }, 0);
+    return total;
+  };
+
+  const TotalPrice = () => {
+    let total = cart.reduce((acc, elemento) => {
+      return acc + elemento.quantity * elemento.price;
+    }, 0);
+    return total;
+  };
+
   let data = {
     cart,
     addToCart,
     clearCart,
     removeProduct,
     getTotalQuantityById,
+    TotalItemsCart,
+    TotalPrice,
   };
 
   return <CartContext.Provider value={data}>{children}</CartContext.Provider>;

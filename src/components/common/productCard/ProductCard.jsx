@@ -16,6 +16,7 @@ export const ProductCard = ({ elemento }) => {
     <Card sx={{ width: 345 }}>
       <CardActionArea>
         <CardMedia
+          sx={{ marginTop: 5 }}
           component="img"
           height="140"
           image={elemento.img}

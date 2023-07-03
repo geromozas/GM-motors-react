@@ -1,0 +1,36 @@
+.imgCart {
+  width: 200px;
+  margin: 15px;
+}
+
+.prodCart {
+  font-family: Fugaz One;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 35%;
+  margin: 0 auto 50px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.textCartContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnEliminar {
+  background: black;
+  color: white;
+  height: 30px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.carritoVacio {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

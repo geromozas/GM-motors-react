@@ -3,6 +3,7 @@ import { products } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import { ItemDetail } from "./ItemDetail";
+import Swal from "sweetalert2";
 
 export const ItemDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
@@ -12,7 +13,21 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
 
   const amount = getTotalQuantityById(+id);
-  console.log("la cantidad es: ", amount);
+
+  const onAdd = (cantidad) => {
+    let data = {
+      ...productSelected,
+      quantity: cantidad,
+    };
+    addToCart(data);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "El producto se ha agregado al carrito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   useEffect(() => {
     let productFind = products.find((product) => product.id === Number(id));
@@ -29,6 +44,7 @@ export const ItemDetailContainer = () => {
       amount={amount}
       productSelected={productSelected}
       addToCart={addToCart}
+      onAdd={onAdd}
     />
   );
 };

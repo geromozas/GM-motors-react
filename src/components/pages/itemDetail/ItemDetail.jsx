@@ -1,15 +1,7 @@
 import { ItemCount } from "../../ItemCount";
 import "./ItemDetail.css";
 
-export const ItemDetail = ({ productSelected, addToCart, amount }) => {
-  const onAdd = (cantidad) => {
-    let data = {
-      ...productSelected,
-      quantity: cantidad,
-    };
-    addToCart(data);
-  };
-
+export const ItemDetail = ({ productSelected, amount, onAdd }) => {
   return (
     <>
       <div className="item-flex">
