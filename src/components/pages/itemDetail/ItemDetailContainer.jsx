@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { products } from "../../../productsMock";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
 import { ItemDetail } from "./ItemDetail";
+import { database } from "../../../firebaseConfig";
+import { collection, getDoc, doc } from "firebase/firestore";
 import Swal from "sweetalert2";
 
 export const ItemDetailContainer = () => {
@@ -30,13 +31,11 @@ export const ItemDetailContainer = () => {
   };
 
   useEffect(() => {
-    let productFind = products.find((product) => product.id === Number(id));
-    const getProduct = new Promise((res) => {
-      res(productFind);
+    let itemCollecion = collection(database, "products");
+    let refDoc = doc(itemCollecion, id);
+    getDoc(refDoc).then((res) => {
+      setProductSelected({ id: res.id, ...res.data() });
     });
-    getProduct
-      .then((res) => setProductSelected(res))
-      .catch((err) => console.log(err));
   }, [id]);
 
   return (

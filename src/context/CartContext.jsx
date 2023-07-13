@@ -1,11 +1,16 @@
 //crear un contexto
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
 //creo el componente proveedor del contexto, a travez de este componente voy a poner a dispocision de mi aplicación
 const CartContextComponent = ({ children }) => {
-  const [cart, setCart] = useState(localStorage.getItem("cart") || []);
+  const [cart, setCart] = useState(
+    JSON.parse(localStorage.getItem("cart")) || []
+  );
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (newProduct) => {
     let exist = cartExist(newProduct.id);
@@ -21,10 +26,8 @@ const CartContextComponent = ({ children }) => {
         }
       });
       setCart(newArray);
-      localStorage.setItem("cart", JSON.stringify(newArray));
     } else {
       setCart([...cart, newProduct]);
-      localStorage.setItem("cart", JSON.stringify([...cart, newProduct]));
     }
   };
 
@@ -43,7 +46,7 @@ const CartContextComponent = ({ children }) => {
   };
 
   const getTotalQuantityById = (id) => {
-    let product = cart.find((prod) => prod.id === +id);
+    let product = cart.find((prod) => prod.id === id);
     return product?.quantity;
   };
 

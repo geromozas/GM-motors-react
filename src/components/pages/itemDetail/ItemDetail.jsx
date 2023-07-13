@@ -12,7 +12,6 @@ export const ItemDetail = ({ productSelected, amount, onAdd }) => {
           <p>
             <span>${productSelected.price}</span>
           </p>
-
           {productSelected.stock > 0 ? (
             <ItemCount
               stock={productSelected.stock}

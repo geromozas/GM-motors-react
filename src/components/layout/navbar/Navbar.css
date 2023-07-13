@@ -12,6 +12,7 @@ img {
   display: flex;
   list-style: none;
   margin: 20px;
+  margin-top: 100px;
 }
 
 .btnCategory {
@@ -21,4 +22,17 @@ img {
 
 .buttonNav {
   color: black !important;
+  width: 150px;
+}
+
+@media (max-width: 1300px) {
+  .categorias {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 300px;
+  }
 }

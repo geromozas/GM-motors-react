@@ -1,4 +1,14 @@
-.containerCards {
-  display: flex;
-  justify-content: center;
+.card {
+  margin: 20px;
+  margin-bottom: 80px;
 }
+
+.cardImg {
+  height: 190px;
+}
+
+/* @media (max-width: 1300px) {
+  .cardImg {
+    width: 200px;
+  }
+} */

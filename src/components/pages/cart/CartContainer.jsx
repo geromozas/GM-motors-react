@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import "./CartContainer.css";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export const CartContainer = () => {
   const { cart, clearCart, removeProduct, TotalPrice } =
@@ -17,7 +19,6 @@ export const CartContainer = () => {
       confirmButtonText: "Si, limpiar",
       denyButtonText: `No`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         clearCart();
         Swal.fire("Se vacio el carrito", "", "success");
@@ -28,52 +29,58 @@ export const CartContainer = () => {
   };
 
   return (
-    <div className="productCart-1">
-      <h2>Total: ${total}</h2>
-      <button className="carritoVacio" onClick={clear}>
-        Limpiar carrito
-      </button>
-      {cart.map((product) => {
-        return (
-          <div className="prodCart" key={product.id}>
-            <img src={product.img} className="imgCart" alt="" />
-            <div>
-              <h2>{product.name}</h2>
-              <div className="textCartContainer">
+    <div>
+      {cart.length === 0 ? (
+        <div className="carritoVacio">
+          <h2>Upsss... Parece que tu carrito esta vacio...</h2>
+          <Link to="/">
+            <Button variant="contained" style={{ marginTop: "80px" }}>
+              Seguir comprando
+            </Button>
+          </Link>
+        </div>
+      ) : (
+        <div className="productCart-1">
+          {cart.map((product) => {
+            return (
+              <div className="prodCart" key={product.id}>
+                <img src={product.img} className="imgCart" alt="" />
                 <div>
-                  <h3>${product.price}</h3>
-                  <h3>Cantidad: {product.quantity}</h3>
+                  <h2>{product.name}</h2>
+                  <div className="textCartContainer">
+                    <div>
+                      <h5>{product.category}</h5>
+                      <h3>${product.price}</h3>
+                      <h3>Cantidad: {product.quantity}</h3>
+                    </div>
+                    <Button
+                      // style={{ alignItems: "end" }}
+                      variant="contained"
+                      className="btnEliminar"
+                      onClick={() => removeProduct(product.id)}
+                    >
+                      Eliminar
+                    </Button>
+                  </div>
                 </div>
-                <button
-                  className="btnEliminar"
-                  onClick={() => removeProduct(product.id)}
-                >
-                  Eliminar
-                </button>
               </div>
-            </div>
-          </div>
-        );
-      })}
+            );
+          })}
+        </div>
+      )}
+      {cart.length > 0 && (
+        <div className="btn-carrito">
+          <Button variant="contained" className="btn-carrito-2" onClick={clear}>
+            Limpiar carrito
+          </Button>
+          <h2>Total: ${total}</h2>
+          <Link to="/checkout">
+            <Button variant="contained" className="btn-carrito-2">
+              Finalizar compra
+            </Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 };
-
-// import { useNavigate } from "react-router-dom";
-
-// export const CartContainer = () => {
-//   const navigate = useNavigate();
-
-//   const realizarCompra = () => {
-//     console.log("se compraron los productos");
-//     //navigate
-//     navigate("/");
-//   };
-
-//   return (
-//     <div>
-//       <h1>Carrito</h1>
-//       <button onClick={realizarCompra}>Comprar</button>
-//     </div>
-//   );
-// };

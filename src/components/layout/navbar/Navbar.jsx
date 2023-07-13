@@ -9,7 +9,7 @@ export const Navbar = () => {
       <div className="navbar">
         <Link to="/">
           <img
-            className="logoimg"
+            className="logoImg"
             src="https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835033/sleep-good/logo-almohada_nyc2sk.png"
             alt="Logo"
             width={300}
@@ -43,7 +43,7 @@ export const Navbar = () => {
             </Button>
           </Link>
         </ul>
-        <CartWidget />
+        <CartWidget className="btnCart" />
       </div>
     </>
   );

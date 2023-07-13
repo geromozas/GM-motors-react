@@ -3,13 +3,18 @@ h1 {
   justify-content: center;
 }
 
-.cards {
-  /* width: 100%; */
+.cards-container {
   display: flex;
   align-items: center;
-  gap: 50px;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
-  padding: 100px;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 1310px;
+  width: 70%;
+}
+
+@media (max-width: 1486) {
+  .cards {
+    justify-content: center;
+  }
 }
