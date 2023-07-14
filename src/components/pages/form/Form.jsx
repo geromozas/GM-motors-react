@@ -1,53 +1,73 @@
 import { Button, TextField } from "@mui/material";
+import "./Form.css";
 
 const Form = ({ handleChange, handleSubmit, errors }) => {
   return (
     <div>
       <form
         onSubmit={handleSubmit}
-        style={{ margin: "20px", display: "flex", flexDirection: "column" }}
+        style={{
+          display: "flex",
+          margin: "auto",
+          flexDirection: "column",
+          width: "500px",
+          marginTop: "100px",
+        }}
       >
+        <h2>COMPLETE LOS SIGUIENTES DATOS</h2>
         <TextField
+          className="inputForm"
+          style={{ marginBottom: "10px" }}
           label="Nombre"
-          variant="standard"
+          variant="outlined"
           name="nombre"
           onChange={handleChange}
           helperText={errors.nombre}
           error={errors.nombre ? true : false}
         />
         <TextField
+          className="inputForm"
+          style={{ marginBottom: "10px" }}
           label="Apellido"
-          variant="standard"
+          variant="outlined"
           name="apellido"
           onChange={handleChange}
           helperText={errors.apellido}
           error={errors.apellido ? true : false}
         />
         <TextField
+          className="inputForm"
+          style={{ marginBottom: "10px" }}
           label="Email"
-          variant="standard"
+          variant="outlined"
           name="email"
           onChange={handleChange}
           helperText={errors.email}
           error={errors.email ? true : false}
         />
         <TextField
+          className="inputForm"
+          style={{ marginBottom: "10px" }}
           label="Repetir email"
-          variant="standard"
+          variant="outlined"
           name="repeatEmail"
           onChange={handleChange}
           helperText={errors.repeatEmail}
           error={errors.repeatEmail ? true : false}
         />
         <TextField
+          className="inputForm"
+          style={{ marginBottom: "10px" }}
           label="Celular"
-          variant="standard"
+          variant="outlined"
           name="celular"
           onChange={handleChange}
           helperText={errors.celular}
           error={errors.celular ? true : false}
         />
-        <Button type="submit">Enviar</Button>
+        <Button type="submit" variant="contained">
+          Enviar
+        </Button>
       </form>
     </div>
   );

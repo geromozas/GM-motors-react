@@ -10,7 +10,6 @@ export const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   const { categoryName } = useParams();
-  console.log(items.length);
 
   useEffect(() => {
     let itemsCollection = collection(database, "products");

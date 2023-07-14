@@ -5,6 +5,7 @@ import { database } from "../../../firebaseConfig.js";
 import { collection, addDoc, updateDoc, doc } from "firebase/firestore";
 import { useContext, useState } from "react";
 import { CartContext } from "../../../context/CartContext.jsx";
+import Swal from "sweetalert2";
 
 const FormContainer = () => {
   const { cart, TotalPrice, clearCart } = useContext(CartContext);
@@ -21,9 +22,6 @@ const FormContainer = () => {
       celular: "",
     },
     onSubmit: (datos) => {
-      console.log("el formulario se envio");
-      console.log(datos);
-
       let order = {
         buyer: datos,
         items: cart,
@@ -55,16 +53,14 @@ const FormContainer = () => {
     }),
   });
 
-  console.log(errors);
   return (
     <div>
       {orderId ? (
-        <div className="compraExitosa">
-          <h1>
-            !Su compra fue exitosa, muchas gracias por confiar en Sleep Good¡
-          </h1>
-          <h4>ID: {orderId}</h4>
-        </div>
+        Swal.fire(
+          "!Su compra fue exitosa, muchas gracias por confiar en Sleep Good¡",
+          "Su numero de seguimineto es: {orderId}",
+          "success"
+        )
       ) : (
         <Form
           handleSubmit={handleSubmit}
@@ -77,3 +73,9 @@ const FormContainer = () => {
 };
 
 export default FormContainer;
+// <div className="compraExitosa">
+//   <h1>
+//     !Su compra fue exitosa, muchas gracias por confiar en Sleep Good¡
+//   </h1>
+//   <h4>ID: {orderId}</h4>
+// </div>
