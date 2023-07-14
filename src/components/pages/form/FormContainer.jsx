@@ -75,9 +75,3 @@ const FormContainer = () => {
 };
 
 export default FormContainer;
-// <div className="compraExitosa">
-//   <h1>
-//     !Su compra fue exitosa, muchas gracias por confiar en Sleep Good¡
-//   </h1>
-//   <h4>ID: {orderId}</h4>
-// </div>

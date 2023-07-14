@@ -24,7 +24,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* // greeting={"Envios gratis y rápidos ⚡ a toda la Argentina"} */
-}

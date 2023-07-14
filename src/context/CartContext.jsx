@@ -1,9 +1,7 @@
-//crear un contexto
 import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext();
 
-//creo el componente proveedor del contexto, a travez de este componente voy a poner a dispocision de mi aplicación
 const CartContextComponent = ({ children }) => {
   const [cart, setCart] = useState(
     JSON.parse(localStorage.getItem("cart")) || []
