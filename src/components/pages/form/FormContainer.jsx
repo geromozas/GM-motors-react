@@ -58,9 +58,11 @@ const FormContainer = () => {
       {orderId ? (
         Swal.fire(
           "!Su compra fue exitosa, muchas gracias por confiar en Sleep Good¡",
-          "Su numero de seguimineto es: {orderId}",
+          `Su numero de seguimineto es: ${orderId}`,
           "success"
-        )
+        ).then(() => {
+          window.location.href = "/";
+        })
       ) : (
         <Form
           handleSubmit={handleSubmit}
