@@ -54,7 +54,6 @@ export const CartContainer = () => {
                       <h3>Cantidad: {product.quantity}</h3>
                     </div>
                     <Button
-                      // style={{ alignItems: "end" }}
                       variant="contained"
                       className="btnEliminar"
                       onClick={() => removeProduct(product.id)}
