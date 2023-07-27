@@ -3,7 +3,7 @@ import "./Form.css";
 
 const Form = ({ handleChange, handleSubmit, errors }) => {
   return (
-    <div>
+    <div className="form-container">
       <form
         onSubmit={handleSubmit}
         style={{
