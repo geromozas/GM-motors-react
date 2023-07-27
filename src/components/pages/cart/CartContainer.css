@@ -41,6 +41,13 @@
   margin-top: 150px;
 }
 
+@media (max-width: 800px) {
+  .carritoVacio {
+    margin-left: 160px;
+    width: 500px;
+  }
+}
+
 .btn-carrito {
   display: flex;
   justify-content: space-evenly;

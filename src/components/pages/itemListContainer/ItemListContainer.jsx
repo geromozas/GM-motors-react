@@ -39,16 +39,18 @@ export const ItemListContainer = () => {
       {items.length > 0 ? (
         <ItemList items={items} />
       ) : (
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "200px",
-          }}
-        >
-          <CircularProgress color="inherit" />
-        </Box>
+        <div className="loading">
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "200px",
+            }}
+          >
+            <CircularProgress color="inherit" />
+          </Box>
+        </div>
       )}
     </div>
   );
