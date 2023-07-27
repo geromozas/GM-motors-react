@@ -8,7 +8,7 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  width: 35%;
+  width: 600px;
   margin: 0 auto 50px;
   border: 2px solid black;
   border-radius: 10px;
@@ -50,4 +50,17 @@
 
 .btn-carrito-2 {
   height: 40px;
+}
+
+@media (max-width: 800px) {
+  .prodCart {
+    margin-left: 100px;
+  }
+  .btn-carrito {
+    margin-left: 300px;
+    flex-direction: column;
+  }
+  .btn-carrito-2 {
+    width: 200px;
+  }
 }

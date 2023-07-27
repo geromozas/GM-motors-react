@@ -9,12 +9,18 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
-  max-width: 1310px;
+  /* max-width: 1310px; */
   width: 70%;
 }
 
-@media (max-width: 1486) {
-  .cards {
-    justify-content: center;
+.item-card {
+  /* display: flex;
+  justify-content: center !important; */
+  margin-top: 100px;
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    margin-left: 285px;
   }
 }

@@ -35,7 +35,7 @@ export const ItemListContainer = () => {
   }, [categoryName]);
 
   return (
-    <div>
+    <div className="item-card">
       {items.length > 0 ? (
         <ItemList items={items} />
       ) : (
