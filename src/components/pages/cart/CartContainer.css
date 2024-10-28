@@ -20,11 +20,18 @@
   justify-content: space-between;
 }
 
+.boxCantElimi {
+  display: flex;
+}
+
+.cantidad {
+  margin-right: 25px;
+}
+
 .btnEliminar {
   background: black;
   color: white;
   height: 30px;
-  margin-right: 15px;
   border-radius: 5px;
 }
 

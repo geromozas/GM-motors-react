@@ -51,15 +51,19 @@ export const CartContainer = () => {
                     <div>
                       <h5>{product.category}</h5>
                       <h3>${product.price}</h3>
-                      <h3>Cantidad: {product.quantity}</h3>
+                      <div className="boxCantElimi">
+                        <h3 className="cantidad">
+                          Cantidad: {product.quantity}
+                        </h3>
+                        <Button
+                          variant="contained"
+                          className="btnEliminar"
+                          onClick={() => removeProduct(product.id)}
+                        >
+                          Eliminar
+                        </Button>
+                      </div>
                     </div>
-                    <Button
-                      variant="contained"
-                      className="btnEliminar"
-                      onClick={() => removeProduct(product.id)}
-                    >
-                      Eliminar
-                    </Button>
                   </div>
                 </div>
               </div>
