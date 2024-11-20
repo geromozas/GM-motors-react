@@ -7,8 +7,11 @@ export const ItemDetail = ({ productSelected, amount, onAdd }) => {
       <div className="item-flex">
         <img src={productSelected.img} alt="" />
         <div className="item-right">
-          <h2>{productSelected.name}</h2>
-          <h5>categoria: {productSelected.category}</h5>
+          <h2 style={{ textTransform: "upperCase" }}>
+            {productSelected.title}
+          </h2>
+          <h6>categoria: {productSelected.category}</h6>
+          <p>{productSelected.description}</p>
           <p>
             <span>${productSelected.price}</span>
           </p>

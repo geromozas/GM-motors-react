@@ -11,10 +11,10 @@ export const CartWidget = () => {
   let totalProduct = TotalItemsCart();
 
   return (
-    <div className="cart" style={{ padding: "20px" }}>
+    <div className="cart" style={{ marginLeft: 200 }}>
       <Link to="/carrito">
         <Badge badgeContent={totalProduct} showZero color="primary">
-          <BsFillCartFill color="black" size="40px" />
+          <BsFillCartFill color="white" size="40px" />
         </Badge>
       </Link>
       {/* <h2>{contador}</h2> */}

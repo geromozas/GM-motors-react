@@ -13,32 +13,35 @@ import { Link } from "react-router-dom";
 export const ProductCard = ({ elemento }) => {
   return (
     <div className="card">
-      <Card sx={{ width: 345 }}>
+      <Card sx={{ width: 400, height: 400 }}>
         <CardActionArea>
           <CardMedia
             sx={{ marginTop: 5 }}
+            style={{ width: 250, height: 230, margin: "auto" }}
             className="cardImg"
             component="img"
             height="200"
             image={elemento.img}
-            alt={elemento.name}
+            alt={elemento.title}
           />
           <CardContent>
             <Typography
               gutterBottom
               variant="h5"
               component="div"
-              style={{ fontSize: "20px" }}
+              style={{ fontSize: "20px", height: 50 }}
             >
-              {elemento.name}
+              {elemento.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              {elemento.category}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="h6" color="text.secondary">
               ${elemento.price}
             </Typography>
           </CardContent>
+          {/* <CardContent>
+            <Typography variant="h6" color="text.secondary">
+              ${elemento.price}
+            </Typography>
+          </CardContent> */}
         </CardActionArea>
         <CardActions>
           <Link to={`/productDetail/${elemento.id}`}>

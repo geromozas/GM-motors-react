@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { Button } from "@mui/material";
-import { CartWidget } from "../../common/CartWidget";
+// import { CartWidget } from "../../common/CartWidget";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -10,40 +10,34 @@ export const Navbar = () => {
         <Link to="/">
           <img
             className="logoImg"
-            src="https://res.cloudinary.com/ddmvo0ert/image/upload/v1685835033/sleep-good/logo-almohada_nyc2sk.png"
+            src="https://firebasestorage.googleapis.com/v0/b/gm-motors-c1596.firebasestorage.app/o/gm-motors-logo.png?alt=media&token=238e4219-afca-40c7-a1d2-bc30956b62ef"
             alt="Logo"
-            width={300}
-            style={{ padding: "20px" }}
+            style={{ padding: "10px" }}
           />
         </Link>
         <ul className="categorias">
           <Link className="btnCategory" to="/">
             <Button className="buttonNav" color="inherit" variant="contained">
-              TODAS
+              TODOS
             </Button>
           </Link>
-          <Link className="btnCategory" to="/category/cervicales">
+          <Link className="btnCategory" to="/category/cascos">
             <Button className="buttonNav" color="inherit" variant="contained">
-              CERVICALES
+              CASCOS
             </Button>
           </Link>
-          <Link className="btnCategory" to="/category/familiares">
+          <Link className="btnCategory" to="/category/camperas">
             <Button className="buttonNav" color="inherit" variant="contained">
-              FAMILIARES
+              CAMPERAS
             </Button>
           </Link>
-          <Link className="btnCategory" to="/category/hoteleras">
+          <Link className="btnCategory" to="/category/guantes">
             <Button className="buttonNav" color="inherit" variant="contained">
-              HOTELERAS
+              GUANTES
             </Button>
           </Link>
-          <Link className="btnCategory" to="/category/inteligentes">
-            <Button className="buttonNav" color="inherit" variant="contained">
-              INTELIGENTES
-            </Button>
-          </Link>
+          {/* <CartWidget className="btnCart" /> */}
         </ul>
-        <CartWidget className="btnCart" />
       </div>
     </>
   );

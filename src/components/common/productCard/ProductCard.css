@@ -4,12 +4,5 @@
 }
 
 .cardImg {
-  height: 190px;
-}
-
-@media (max-width: 1302px) {
-  .cardImg {
-    width: 250px !important;
-    justify-content: center !important;
-  }
+  height: 300px;
 }
