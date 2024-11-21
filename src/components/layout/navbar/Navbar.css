@@ -1,6 +1,11 @@
 .navbar {
   display: flex;
   background-color: rgb(33, 33, 33);
+  justify-content: space-around;
+}
+
+.boxButtons {
+  display: flex;
 }
 
 .logoImg {
@@ -10,8 +15,6 @@
 .categorias {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
   flex-wrap: wrap;
 }
 
@@ -22,6 +25,19 @@
 .buttonNav {
   color: black !important;
   width: 150px;
+}
+
+.boxCart {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  justify-content: center;
+}
+
+@media (max-width: 1300px) {
+  .boxButtons {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 620px) {

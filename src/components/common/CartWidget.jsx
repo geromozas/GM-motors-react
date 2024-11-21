@@ -11,7 +11,7 @@ export const CartWidget = () => {
   let totalProduct = TotalItemsCart();
 
   return (
-    <div className="cart" style={{ marginLeft: 200 }}>
+    <div className="cart" style={{ padding: 20 }}>
       <Link to="/carrito">
         <Badge badgeContent={totalProduct} showZero color="primary">
           <BsFillCartFill color="white" size="40px" />

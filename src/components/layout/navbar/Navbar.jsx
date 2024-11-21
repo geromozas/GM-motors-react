@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { Button } from "@mui/material";
-// import { CartWidget } from "../../common/CartWidget";
+import { CartWidget } from "../../common/CartWidget";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
@@ -15,29 +15,33 @@ export const Navbar = () => {
             style={{ padding: "10px" }}
           />
         </Link>
-        <ul className="categorias">
-          <Link className="btnCategory" to="/">
-            <Button className="buttonNav" color="inherit" variant="contained">
-              TODOS
-            </Button>
-          </Link>
-          <Link className="btnCategory" to="/category/cascos">
-            <Button className="buttonNav" color="inherit" variant="contained">
-              CASCOS
-            </Button>
-          </Link>
-          <Link className="btnCategory" to="/category/camperas">
-            <Button className="buttonNav" color="inherit" variant="contained">
-              CAMPERAS
-            </Button>
-          </Link>
-          <Link className="btnCategory" to="/category/guantes">
-            <Button className="buttonNav" color="inherit" variant="contained">
-              GUANTES
-            </Button>
-          </Link>
-          {/* <CartWidget className="btnCart" /> */}
-        </ul>
+        <div className="boxButtons">
+          <ul className="categorias">
+            <Link className="btnCategory" to="/">
+              <Button className="buttonNav" color="inherit" variant="contained">
+                TODOS
+              </Button>
+            </Link>
+            <Link className="btnCategory" to="/category/cascos">
+              <Button className="buttonNav" color="inherit" variant="contained">
+                CASCOS
+              </Button>
+            </Link>
+            <Link className="btnCategory" to="/category/camperas">
+              <Button className="buttonNav" color="inherit" variant="contained">
+                CAMPERAS
+              </Button>
+            </Link>
+            <Link className="btnCategory" to="/category/guantes">
+              <Button className="buttonNav" color="inherit" variant="contained">
+                GUANTES
+              </Button>
+            </Link>
+          </ul>
+          <div className="boxCart">
+            <CartWidget className="btnCart" />
+          </div>
+        </div>
       </div>
     </>
   );
