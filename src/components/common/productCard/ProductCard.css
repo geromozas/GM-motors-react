@@ -6,3 +6,9 @@
 .cardImg {
   height: 300px;
 }
+
+@media (max-width: 425px) {
+  .card .MuiCard-root {
+    width: 300px !important; /* Ajusta el ancho del Card */
+  }
+}
