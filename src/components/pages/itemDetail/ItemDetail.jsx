@@ -11,8 +11,10 @@ export const ItemDetail = ({ productSelected, amount, onAdd }) => {
             {productSelected.title}
           </h2>
           <h6>categoria: {productSelected.category}</h6>
-          <p>{productSelected.description}</p>
-          <p>
+          <div className="boxDescriptionText">
+            <p className="details">{productSelected.description}</p>
+          </div>
+          <p className="boxPrice">
             <span>${productSelected.price}</span>
           </p>
           {productSelected.stock > 0 ? (

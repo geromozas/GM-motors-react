@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 import { useCount } from "../hooks/useCount";
 import "./ItemCount.css";
 
@@ -8,20 +8,27 @@ export const ItemCount = ({ stock, initial = 1, onAdd }) => {
   return (
     <>
       <div className="itemContainer">
-        <div>
-          <Button variant="contained" size="small" onClick={decrement}>
+        <div className="boxIncremetDecrement">
+          <button className="buttonDecrement" onClick={decrement}>
             -
-          </Button>
-          <input type="number" value={count} readOnly />
-          <Button variant="contained" size="small" onClick={increment}>
+          </button>
+          <TextField
+            className="boxNumber"
+            variant="outlined"
+            aria-readonly
+            value={count}
+            sx={{ width: 40 }}
+          />
+          <button className="buttonIncrement" onClick={increment}>
             +
-          </Button>
+          </button>
         </div>
         <Button
           className="agregar"
           variant="contained"
           size="small"
           onClick={() => onAdd(count)}
+          sx={{ width: 70, fontSize: 10 }}
         >
           Agregar al carrito
         </Button>
