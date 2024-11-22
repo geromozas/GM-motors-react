@@ -34,9 +34,7 @@ export const CartContainer = () => {
         <div className="carritoVacio">
           <h2>Upsss... Parece que tu carrito esta vacio...</h2>
           <Link to="/">
-            <Button variant="contained" style={{ marginTop: "80px" }}>
-              Seguir comprando
-            </Button>
+            <Button variant="contained">Seguir comprando</Button>
           </Link>
         </div>
       ) : (
