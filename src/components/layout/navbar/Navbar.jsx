@@ -10,7 +10,7 @@ export const Navbar = () => {
         <Link to="/">
           <img
             className="logoImg"
-            src="https://firebasestorage.googleapis.com/v0/b/gm-motors-c1596.firebasestorage.app/o/gm-motors-logo.png?alt=media&token=238e4219-afca-40c7-a1d2-bc30956b62ef"
+            src="https://firebasestorage.googleapis.com/v0/b/gm-motors-c1596.firebasestorage.app/o/gm-motors-logo.png?alt=media&token=b9651e39-01e0-4e7d-8a66-b2a0e36e1a88"
             alt="Logo"
             style={{ padding: "10px" }}
           />
@@ -38,7 +38,7 @@ export const Navbar = () => {
               </Button>
             </Link>
           </ul>
-          <div className="boxCart">
+          <div className="boxCartIcon">
             <CartWidget className="btnCart" />
           </div>
         </div>
