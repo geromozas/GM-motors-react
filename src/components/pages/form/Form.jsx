@@ -10,11 +10,12 @@ const Form = ({ handleChange, handleSubmit, errors }) => {
           display: "flex",
           margin: "auto",
           flexDirection: "column",
-          width: "500px",
           marginTop: "100px",
+          marginBottom: "200px",
+          alignItems: "center",
         }}
       >
-        <h2>COMPLETE LOS SIGUIENTES DATOS</h2>
+        <h2 className="datos">COMPLETE LOS SIGUIENTES DATOS</h2>
         <TextField
           className="inputForm"
           style={{ marginBottom: "10px" }}
@@ -65,7 +66,7 @@ const Form = ({ handleChange, handleSubmit, errors }) => {
           helperText={errors.celular}
           error={errors.celular ? true : false}
         />
-        <Button type="submit" variant="contained">
+        <Button type="submit" variant="contained" className="buttonEnviar">
           Enviar
         </Button>
       </form>

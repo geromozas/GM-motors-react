@@ -1,5 +1,21 @@
-@media (max-width: 800px) {
-  .form-container {
-    margin-left: 150px;
+.datos {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 550px) {
+  .datos {
+    font-size: large;
+  }
+  .inputForm {
+    width: 300px;
+  }
+  .buttonEnviar {
+    width: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .datos {
+    font-size: medium;
   }
 }
