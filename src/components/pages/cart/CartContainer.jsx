@@ -68,7 +68,7 @@ export const CartContainer = () => {
           <Button variant="contained" onClick={clear}>
             Limpiar carrito
           </Button>
-          <h2>Total: ${total}</h2>
+          <h2 className="totalPrice">Total: ${total}</h2>
           <Link to="/checkout">
             <Button variant="contained">Finalizar compra</Button>
           </Link>
