@@ -15,7 +15,12 @@ export const ItemDetail = ({ productSelected, amount, onAdd }) => {
             <p className="details">{productSelected.description}</p>
           </div>
           <p className="boxPrice">
-            <span>${productSelected.price}</span>
+            <span>
+              {Number(productSelected.price).toLocaleString("es-AR", {
+                style: "currency",
+                currency: "ARS",
+              })}
+            </span>
           </p>
           {productSelected.stock > 0 ? (
             <ItemCount

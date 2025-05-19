@@ -34,14 +34,12 @@ export const ProductCard = ({ elemento }) => {
               {elemento.title}
             </Typography>
             <Typography variant="h6" color="text.secondary">
-              ${elemento.price}
+              {Number(elemento.price).toLocaleString("es-AR", {
+                style: "currency",
+                currency: "ARS",
+              })}
             </Typography>
           </CardContent>
-          {/* <CardContent>
-            <Typography variant="h6" color="text.secondary">
-              ${elemento.price}
-            </Typography>
-          </CardContent> */}
         </CardActionArea>
         <CardActions>
           <Link to={`/productDetail/${elemento.id}`}>

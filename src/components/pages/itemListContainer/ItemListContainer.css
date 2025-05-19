@@ -9,11 +9,10 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
-  /* width: 70%; */
+  margin-bottom: 80px;
+  /* flex-direction: column; */
 }
 
 .item-card {
   margin-top: 100px;
 }
-
-
